@@ -9,7 +9,7 @@ WriteMakefile
           'PREREQ_PM' => {
                            'Test::More' => 0,
                            'Validator::Custom' => '0.0701',
-                           'Object::Simple' => '2.1203'
+                           'Object::Simple' => '3.0202'
                          }
         )
 ;

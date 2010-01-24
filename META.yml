@@ -1,6 +1,6 @@
 ---
 name: Validator-Custom-Ext-Mojolicious
-version: 0.0103
+version: 0.0104
 author:
   - 'Yuki Kimoto <kimoto.yuki@gmail.com>'
 abstract: Validator for Mojolicious
@@ -8,14 +8,14 @@ license: perl
 resources:
   license: ~
 requires:
-  Object::Simple: 2.1203
+  Object::Simple: 3.0202
   Validator::Custom: 0.0701
 build_requires:
   Test::More: 0
 provides:
   Validator::Custom::Ext::Mojolicious:
     file: lib/Validator/Custom/Ext/Mojolicious.pm
-    version: 0.0103
+    version: 0.0104
 generated_by: Module::Build version 0.31012
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
