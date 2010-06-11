@@ -3,7 +3,7 @@ use Test::More 'no_plan';
 package MyValidator1;
 use base 'Validator::Custom';
 
-__PACKAGE__->add_constraint(
+__PACKAGE__->register_constraint(
     int => sub { ($_[0] || '') =~ /^\d+$/ }
 );
 
@@ -36,7 +36,7 @@ __PACKAGE__->attr('name');
 
 package main;
 
-use lib 't/01-core';
+use lib 't/validator-custom-ext-mojolicious';
 use_ok('Validator::Custom::Ext::Mojolicious');
 
 my $test;

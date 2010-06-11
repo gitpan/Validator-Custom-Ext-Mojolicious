@@ -22,6 +22,14 @@ sub validate {
     # Params
     my $params = $c->req->params->to_hash || {};
     
+    # Merge stash value
+    my $stash = $c->stash;
+    for (my $i = 0; $i < @$rule; $i += 2) {
+        my $key = $rule->[$i];
+        $params->{$key} = $stash->{$key}
+          if !defined $params->{$key} && exists $stash->{$key};
+    }
+    
     my $validator = $self->validator;
     
     # Not exsits 'validator'
@@ -57,15 +65,15 @@ Validator::Custom::Ext::Mojolicious - Mojolicious validator
 
 =head1 VERSION
 
-Version 0.0301
+Version 0.0302
 
 =cut
 
-our $VERSION = '0.0301';
+our $VERSION = '0.0302';
 
-=head1 STATE
+=head1 STABILITY
 
-This module is not stable.
+This module is not stable. APIs will be changed.
 
 =head1 SYNOPSIS
 
