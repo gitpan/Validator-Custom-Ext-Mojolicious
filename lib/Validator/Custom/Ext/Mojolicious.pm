@@ -63,13 +63,18 @@ sub validate {
 
 Validator::Custom::Ext::Mojolicious - Mojolicious validator
 
+=head1 CAUTHION
+
+This module will be removed in neary feature.
+Please use L<Validator::Custom> directory in your application.
+
 =head1 VERSION
 
-Version 0.0302
+Version 0.0303
 
 =cut
 
-our $VERSION = '0.0302';
+our $VERSION = '0.0303';
 
 =head1 STABILITY
 

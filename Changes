@@ -1,3 +1,5 @@
+0.0302
+  this module will be removed in nearly feature
 0.0301
   rename "validation_rules" to "rules"
   rename "validator_class" to "validator"
